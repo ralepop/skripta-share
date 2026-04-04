@@ -15,6 +15,8 @@
 4. [Opis proizvoda](#4-opis-proizvoda)
     - [4.1 Pregled arhitekture sistema](#41-pregled-arhitekture-sistema)
     - [4.2 Pregled karakteristika](#42-pregled-karakteristika)
+5. [Funkcionalni zahtevi](#5-funkcionalni-zahtevi)
+
 ---
 <br>
 
@@ -68,7 +70,7 @@ Pored registrovanih korisnika, sistem omogućava i gostujući pristup, gde koris
 Na serverskoj strani, aplikacija je realizovana korišćenjem PHP back-end logike, koja obrađuje zahteve korisnika, komunicira sa bazom podataka i generiše odgovarajući HTML/CSS/JavaScript interfejs koji se prikazuje korisniku putem web pregledača.
 
 U MySQL bazi podataka čuvaju se informacije o:
-* korisničkim nalozima (korisničko ime, lozinka, ime, prezime, fakultet, smer)
+* korisničkim nalozima (korisničko ime, mejl, lozinka, ime, prezime, fakultet, smer)
 * nastavnim materijalima (skripte, zbirke zadataka, kolokvijumi, ispiti iz prethodnih rokova)
 * komentarima i ocenama materijala
 * predmetima, godinama studija i kategorijama
@@ -91,3 +93,61 @@ Ovakva arhitektura omogućava centralizovano, sigurno i efikasno skladištenje a
 | Praćenje popularnosti materijala | Sistem vodi evidenciju broja pregleda i preuzimanja dokumenata |
 
 <br>
+
+
+## 5. Funkcionalni zahtevi
+U ovom odeljku definišu se osnovne funkcije koje sistem treba da obezbedi različitim kategorijama korisnika radi efikasne razmene akademskog sadržaja.
+
+
+### 5.1. Autentifikacija i upravljanje nalogom
+Ova grupa funkcija osigurava bezbednost sistema i personalizaciju korisničkog iskustva. Pristup privatnim podacima i interaktivnim funkcijama strogo je ograničen na autorizovane korisnike.
+
+
+#### 5.1.1. Registracija
+Ukoliko korisnik nema svoj nalog, može ga kreirati unošenjem ličnih (korisničko ime i lozinka) i akademskih podataka (ime, prezime, fakultet, smer, mejl). Ovi podaci se upisuju u bazu podataka, čime korisnik dobija status studenta i mogućnost pristupa naprednim funkcijama sistema.
+
+#### 5.1.2. Login
+Registrovani korisnici, moderatori i administratori se autorizuju unošenjem korisničkog imena i lozinke. Ovi kredencijali moraju da se poklope sa postojećim podacima u bazi. Nakon potvrđene autorizacije, sistem dodeljuje odgovarajuće privilegije u skladu sa ulogom korisnika.
+
+#### 5.1.3. Upravljanje profilom
+Autorizovani korisnik može da pristupi interfejsu za pregled i izmenu svojih podataka. Ovo obuhvata promenu lozinke, ažuriranje akademskih informacija i uvid u istoriju sopstvenih objavljenih materijala.
+
+
+### 5.2. Funkcionalnosti za goste
+Korisnici koji pristupaju sistemu bez autorizacije (gosti) imaju ograničen uvid u sadržaj, koji im omogućava da se upoznaju sa platformom pre registracije.
+
+#### 5.2.1. Pretraga materijala
+Sistem omogućava gostima pretragu baze podataka putem ključnih reči. Pretraga se može filtrirati prema fakultetu, smeru ili predmetu kako bi se brzo pronašli relevantni dokumenti.
+
+#### 5.2.2. Pregled materijala
+Gosti mogu pregledati osnovne informacije o dostupnim skriptama i materijalima (naslov, opis, autor i ocena), ali nemaju mogućnost preuzimanja fajlova ili uvida u komentare dok se ne registruju.
+
+
+### 5.3. Funkcionalnosti za studente
+Studenti su primarna kategorija korisnika kojima je omogućena puna interakcija sa sadržajem i drugim članovima zajednice.
+
+#### 5.3.1. Upload materijala
+Studenti mogu dodavati nove materijale (skripte, beleške, ispitne rokove) putem generisanih formi. Prilikom unosa, obavezno je definisati kategoriju i predmet. Svaki postavljeni fajl se šalje na proveru pre nego što postane vidljiv ostalim korisnicima.
+
+#### 5.3.2. Download materijala
+Autorizovani studenti imaju neograničenu mogućnost preuzimanja dostupnih materijala iz baze podataka na svoj lokalni uređaj.
+
+#### 5.3.3. Interakcija (Komentarisanje i Ocenjivanje)
+Korisnici mogu ocenjivati korisnost materijala i ostavljati tekstualne komentare. Ove akcije se beleže u bazi i direktno utiču na rangiranje i vidljivost materijala na početnoj strani.
+
+#### 5.3.4. Bookmark
+Sistem nudi mogućnost čuvanja određenih materijala u privatnu listu "omiljenih". Time se studentu omogućava brz pristup često korišćenim dokumentima bez ponovne pretrage.
+
+
+### 5.4. Funkcionalnosti za moderatore i administratore
+Ove funkcionalnosti su namenjene održavanju kvaliteta, reda i tehničke ispravnosti sistema ScriptShare.
+
+#### 5.4.1. Odobravanje materijala
+Moderatori imaju pristup interfejsu koji omogućava pregled svih novopristiglih dokumenata. Oni mogu potvrditi objavu materijala, zatražiti izmenu ili ga trajno ukloniti ukoliko ne ispunjava akademske standarde.
+
+#### 5.4.2. Brisanje sadržaja
+U cilju održavanja kvaliteta, moderatori i administrator mogu ukloniti neadekvatne komentare ili zastarele materijale. Svako brisanje se automatski reflektuje u bazi podataka i na korisničkom interfejsu.
+
+#### 5.4.3. Upravljanje korisnicima
+Administrator sistema poseduje ekskluzivna prava za dodeljivanje moderatorskih privilegija, brisanje korisničkih naloga i rešavanje tehničkih problema vezanih za bazu podataka i autorizaciju.
+
