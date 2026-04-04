@@ -114,6 +114,7 @@ Ovakva arhitektura omogućava centralizovano, sigurno i efikasno skladištenje a
 ## 5. Funkcionalni zahtevi
 U ovom odeljku definišu se osnovne funkcije koje sistem treba da obezbedi različitim kategorijama korisnika radi efikasne razmene akademskog sadržaja.
 
+<br>
 
 ### 5.1. Autentifikacija i upravljanje nalogom
 Ova grupa funkcija osigurava bezbednost sistema i personalizaciju korisničkog iskustva. Pristup privatnim podacima i interaktivnim funkcijama strogo je ograničen na autorizovane korisnike.
@@ -128,6 +129,7 @@ Registrovani korisnici, moderatori i administratori se autorizuju unošenjem kor
 #### 5.1.3. Upravljanje profilom
 Autorizovani korisnik može da pristupi interfejsu za pregled i izmenu svojih podataka. Ovo obuhvata promenu lozinke, ažuriranje akademskih informacija i uvid u istoriju sopstvenih objavljenih materijala.
 
+<br>
 
 ### 5.2. Funkcionalnosti za goste
 Korisnici koji pristupaju sistemu bez autorizacije (gosti) imaju ograničen uvid u sadržaj, koji im omogućava da se upoznaju sa platformom pre registracije.
@@ -138,6 +140,7 @@ Sistem omogućava gostima pretragu baze podataka putem ključnih reči. Pretraga
 #### 5.2.2. Pregled materijala
 Gosti mogu pregledati osnovne informacije o dostupnim skriptama i materijalima (naslov, opis, autor i ocena), ali nemaju mogućnost preuzimanja fajlova ili uvida u komentare dok se ne registruju.
 
+<br>
 
 ### 5.3. Funkcionalnosti za studente
 Studenti su primarna kategorija korisnika kojima je omogućena puna interakcija sa sadržajem i drugim članovima zajednice.
@@ -154,6 +157,7 @@ Korisnici mogu ocenjivati korisnost materijala i ostavljati tekstualne komentare
 #### 5.3.4. Bookmark
 Sistem nudi mogućnost čuvanja određenih materijala u privatnu listu "omiljenih". Time se studentu omogućava brz pristup često korišćenim dokumentima bez ponovne pretrage.
 
+<br>
 
 ### 5.4. Funkcionalnosti za moderatore i administratore
 Ove funkcionalnosti su namenjene održavanju kvaliteta, reda i tehničke ispravnosti sistema ScriptShare.
