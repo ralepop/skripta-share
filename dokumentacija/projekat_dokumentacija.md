@@ -16,6 +16,22 @@
     - [4.1 Pregled arhitekture sistema](#41-pregled-arhitekture-sistema)
     - [4.2 Pregled karakteristika](#42-pregled-karakteristika)
 5. [Funkcionalni zahtevi](#5-funkcionalni-zahtevi)
+    - [5.1. Autentifikacija i upravljanje nalogom](#51-autentifikacija-i-upravljanje-nalogom)
+        - [5.1.1. Registracija](#511-registracija)
+        - [5.1.2. Login](#512-login)
+        - [5.1.3. Upravljanje profilom](#513-upravljanje-profilom)
+    - [5.2. Funkcionalnosti za goste](#52-funkcionalnosti-za-goste)
+        - [5.2.1. Pretraga materijala](#521-pretraga-materijala)
+        - [5.2.2. Pregled materijala](#522-pregled-materijala)
+    - [5.3. Funkcionalnosti za studente](#53-funkcionalnosti-za-studente)
+        - [5.3.1. Upload materijala](#531-upload-materijala)
+        - [5.3.2. Download materijala](#532-download-materijala)
+        - [5.3.3. Interakcija (Komentarisanje i Ocenjivanje)](#533-interakcija-komentarisanje-i-ocenjivanje)
+        - [5.3.4. Bookmark](#534-bookmark)
+    - [5.4. Funkcionalnosti za moderatore i administratore](#54-funkcionalnosti-za-moderatore-i-administratore)
+        - [5.4.1. Odobravanje materijala](#541-odobravanje-materijala)
+        - [5.4.2. Brisanje sadržaja](#542-brisanje-sadržaja)
+        - [5.4.3. Upravljanje korisnicima](#543-upravljanje-korisnicima)
 
 ---
 <br>
