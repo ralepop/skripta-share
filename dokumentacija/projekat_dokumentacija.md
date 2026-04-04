@@ -12,7 +12,9 @@
     - [3.2 Student](#32-student)
     - [3.3 Moderator](#33-moderator)
     - [3.4 Administrator](#34-administrator)
-
+4. [Opis proizvoda](#4-opis-proizvoda)
+    - [4.1 Pregled arhitekture sistema](#41-pregled-arhitekture-sistema)
+    - [4.2 Pregled karakteristika](#42-pregled-karakteristika)
 ---
 <br>
 
@@ -49,3 +51,43 @@ Moderator je zadužen za održavanje integriteta platforme kroz proveru, odobrav
 
 ### 3.4. Administrator
 Administrator vrši nadzor nad celokupnim radom sistema i upravlja korisničkim nalozima. Njegove privilegije uključuju dodelu i promenu korisničkih prava, upravljanje bazom podataka i kontrolu rada moderatora, čime obezbeđuje nesmetano funkcionisanje aplikacije na svim nivoima.
+
+
+## 4. Opis proizvoda
+
+### 4.1. Pregled arhitekture sistema
+Sistem je zamišljen kao dinamička web aplikacija postavljena na web serveru koji podržava PHP tehnologiju, dok se za čuvanje i upravljanje podacima koristi MySQL baza podataka.
+
+Aplikacija omogućava tri osnovna nivoa pristupa sistemu:
+* Administrator
+* Moderator
+* Student (registrovani korisnik)
+
+Pored registrovanih korisnika, sistem omogućava i gostujući pristup, gde korisnici mogu pregledati deo javno dostupnog sadržaja bez prijavljivanja.
+
+Na serverskoj strani, aplikacija je realizovana korišćenjem PHP back-end logike, koja obrađuje zahteve korisnika, komunicira sa bazom podataka i generiše odgovarajući HTML/CSS/JavaScript interfejs koji se prikazuje korisniku putem web pregledača.
+
+U MySQL bazi podataka čuvaju se informacije o:
+* korisničkim nalozima (korisničko ime, lozinka, ime, prezime, fakultet, smer)
+* nastavnim materijalima (skripte, zbirke zadataka, kolokvijumi, ispiti iz prethodnih rokova)
+* komentarima i ocenama materijala
+* predmetima, godinama studija i kategorijama
+* statistici preuzimanja i popularnosti dokumenata
+
+Studenti imaju mogućnost da postavljaju nove materijale, pregledaju i preuzimaju postojeće, dok moderator upravlja sadržajem i proverava ispravnost objavljenih dokumenata. Administrator upravlja korisničkim privilegijama i celokupnim sistemom.
+
+Ovakva arhitektura omogućava centralizovano, sigurno i efikasno skladištenje akademskih materijala dostupnih studentima u svakom trenutku.
+
+### 4.2. Pregled karakteristika
+| Korist za korisnika | Karakteristika koja je obezbeđuje |
+| :--- | :--- |
+| Brz i jednostavan pristup svim materijalima za učenje | Sistem je neprekidno online i omogućava pristup sa bilo kog uređaja povezanog na internet |
+| Centralizovano mesto za sve skripte i rokove | Svi materijali su organizovani po fakultetu, smeru, godini i predmetu |
+| Jednostavna pretraga potrebnih dokumenata | Implementirana pretraga i filtriranje po kategorijama i nazivima predmeta |
+| Mogućnost razmene znanja među studentima | Registrovani korisnici mogu postavljati, komentarisati i ocenjivati materijale |
+| Sigurnost i poverljivost podataka | Pristup sistemu zaštićen je autentifikacijom i autorizacijom korisnika |
+| Pouzdanost i kvalitet sadržaja | Moderator vrši proveru, izmenu i brisanje neodgovarajućih materijala |
+| Pristup sa različitih platformi | Interfejs zasnovan na HTML-u, CSS-u, JavaScript-u i Django-u omogućava platformsku nezavisnost |
+| Praćenje popularnosti materijala | Sistem vodi evidenciju broja pregleda i preuzimanja dokumenata |
+
+<br>
