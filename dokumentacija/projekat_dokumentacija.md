@@ -229,6 +229,3 @@ U prvoj fazi razvoja, fokus je na sledećim prioritetima:
 * Interfejs za moderatorsko odobravanje dokumenata.
 
 U narednim verzijama sistema planira se uvođenje inovativnih funkcionalnosti, kao što su 
-
-
-automatsko generisanje rezimea materijala, napredni sistemi preporuka zasnovani na interesovanjima korisnika, kao i mogućnost direktne komunikacije između studenata radi lakše saradnje na projektima.
