@@ -28,10 +28,13 @@
         - [5.3.2. Download materijala](#532-download-materijala)
         - [5.3.3. Interakcija (Komentarisanje i Ocenjivanje)](#533-interakcija-komentarisanje-i-ocenjivanje)
         - [5.3.4. Bookmark](#534-bookmark)
+        - [5.3.5. Gamifikacija (Bodovi i bedževi)](#535-gamifikacija-bodovi-i-bedževi)
+        - [5.3.6. Bounty sistem](#536-bounty-sistem)
     - [5.4. Funkcionalnosti za moderatore i administratore](#54-funkcionalnosti-za-moderatore-i-administratore)
         - [5.4.1. Odobravanje materijala](#541-odobravanje-materijala)
         - [5.4.2. Brisanje sadržaja](#542-brisanje-sadržaja)
         - [5.4.3. Upravljanje korisnicima](#543-upravljanje-korisnicima)
+        - [5.4.4. Verifikovan status](#544-verifikovan-status)
 6. [Pretpostavke i ograničenja](#6-pretpostavke-i-ograničenja)
 7. [Kvalitet](#7-kvalitet)
 8. [Nefunkcionalni zahtevi](#8-nefunkcionalni-zahtevi)
@@ -193,7 +196,7 @@ U cilju održavanja kvaliteta, moderatori i administrator mogu ukloniti neadekva
 #### 5.4.3. Upravljanje korisnicima
 Administrator sistema poseduje ekskluzivna prava za dodeljivanje moderatorskih privilegija, brisanje korisničkih naloga i rešavanje tehničkih problema vezanih za bazu podataka i autorizaciju.
 
-#### 5.4.4. Verifikacija kvaliteta  (Verified status)
+#### 5.4.4. Verifikovan status
 Moderatori imaju opciju za dodelu oznake "Verified" materijalima koji su prošli strogu proveru relevantnosti i tačnosti (npr. zvanični ispitni rokovi). Ovi materijali dobijaju vizuelni identifikator (bedž poverenja) i prioritet u rezultatima pretrage.
 
 <br><br>
