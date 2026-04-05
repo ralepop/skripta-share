@@ -32,6 +32,15 @@
         - [5.4.1. Odobravanje materijala](#541-odobravanje-materijala)
         - [5.4.2. Brisanje sadržaja](#542-brisanje-sadržaja)
         - [5.4.3. Upravljanje korisnicima](#543-upravljanje-korisnicima)
+6. [Pretpostavke i ograničenja](#6-pretpostavke-i-ograničenja)
+7. [Kvalitet](#7-kvalitet)
+8. [Nefunkcionalni zahtevi](#8-nefunkcionalni-zahtevi)
+    - [8.1. Sistemski zahtevi](#81-sistemski-zahtevi)
+    - [8.2. Ostali zahtevi](#82-ostali-zahtevi)
+9. [Zahtevi za korisničkom dokumentacijom](#9-zahtevi-za-korisničkom-dokumentacijom)
+    - [9.1. Uputstva za korišćenje sajta](#91-uputstva-za-korišćenje-sajta)
+    - [9.2. Označavanje](#92-označavanje)
+10. [Plan i prioriteti](#10-plan-i-prioriteti)
 
 ---
 <br>
@@ -44,6 +53,8 @@ Projekat ScriptShare je deo praktične nastave predmeta Principi softverskog in�
 ### 1.2 Namena dokumenta i ciljne grupe
 Tekst koji sledi definiše namenu aplikacije, zahteve i funkcionalnosti koje ona upotrebljava i pruža, namenjen je svim članovima tima.
 
+<br><br>
+
 ## 2. Opis problema
 Ova aplikacija stupa u pomoć studentima i omogućava im da na jednom mestu imaju brz, jednostavan i pouzdan pristup materijalima za učenje, posebno u periodima kolokvijuma i ispita, kada je vreme od presudnog značaja. U praksi se materijali poput skripti, zbirki zadataka, rokova iz prethodnih godina i beleški često nalaze rasuti po različitim platformama, grupama na društvenim mrežama ili privatnim porukama, što otežava njihovo pronalaženje i korišćenje.
 
@@ -54,6 +65,8 @@ Registrovani korisnici, pored pregleda sadržaja, mogu da postavljaju nove mater
 Moderator sistema brine o ažurnosti i kvalitetu sadržaja, ima mogućnost dodavanja, izmene i brisanja materijala, kao i odobravanja novih objava korisnika. Administrator vodi računa o upravljanju korisničkim nalozima, autorizaciji i dodeli korisničkih privilegija.
 
 Na početnoj strani aplikacije nalaze se najnovije i najpopularnije skripte, obaveštenja o aktuelnim ispitnim rokovima, kao i preporučeni materijali koji mogu biti od značaja studentima.
+
+<br><br>
 
 ## 3. Kategorije korisnika
 Aplikacija podržava više tipova korisnika: goste, studente, moderatore i administratore.
@@ -70,6 +83,7 @@ Moderator je zadužen za održavanje integriteta platforme kroz proveru, odobrav
 ### 3.4. Administrator
 Administrator vrši nadzor nad celokupnim radom sistema i upravlja korisničkim nalozima. Njegove privilegije uključuju dodelu i promenu korisničkih prava, upravljanje bazom podataka i kontrolu rada moderatora, čime obezbeđuje nesmetano funkcionisanje aplikacije na svim nivoima.
 
+<br><br>
 
 ## 4. Opis proizvoda
 
@@ -108,8 +122,7 @@ Ovakva arhitektura omogućava centralizovano, sigurno i efikasno skladištenje a
 | Pristup sa različitih platformi | Interfejs zasnovan na HTML-u, CSS-u, JavaScript-u i Django-u omogućava platformsku nezavisnost |
 | Praćenje popularnosti materijala | Sistem vodi evidenciju broja pregleda i preuzimanja dokumenata |
 
-<br>
-
+<br><br>
 
 ## 5. Funkcionalni zahtevi
 U ovom odeljku definišu se osnovne funkcije koje sistem treba da obezbedi različitim kategorijama korisnika radi efikasne razmene akademskog sadržaja.
@@ -171,3 +184,51 @@ U cilju održavanja kvaliteta, moderatori i administrator mogu ukloniti neadekva
 #### 5.4.3. Upravljanje korisnicima
 Administrator sistema poseduje ekskluzivna prava za dodeljivanje moderatorskih privilegija, brisanje korisničkih naloga i rešavanje tehničkih problema vezanih za bazu podataka i autorizaciju.
 
+<br><br>
+
+## 6. Pretpostavke i ograničenja
+Prilikom razvoja sistema potrebno je težiti jedinstvenom i intuitivnom dizajnu koji olakšava navigaciju kroz akademske materijale. Neophodno je strogo voditi računa o bezbednosti autorizacionih podataka kako bi se sprečio neovlašćeni pristup privatnim informacijama korisnika.
+
+Specifično ograničenje sistema je da korisnik koji izgubi pristupne podatke ne može samostalno povratiti svoj nalog.
+
+<br><br>
+
+## 7. Kvalitet
+Sve definisane funkcionalnosti sistema moraju biti podvrgnute testiranju metodom crne kutije. Poseban fokus biće stavljen na:
+* **Performanse:** Testiranje brzine odziva servera i kapaciteta baze podataka pri  pristupu velikog broja korisnika.
+* **Otpornost na greške:** Validacija svih korisničkih unosa kako bi se sprečili padovi sistema.
+* **Bezbednost:** Implementacija zaštite od malicioznih napada, sa posebnim naglaskom na sprečavanje SQL injekcija, čime se osigurava integritet baze podataka.
+
+<br><br>
+
+## 8. Nefunkcionalni zahtevi
+
+### 8.1. Sistemski zahtevi
+Za funkcionisanje sistema neophodno je da serversko okruženje podržava PHP servis i MySQL bazu podataka. Korisnički interfejs treba da bude raspoloživ za većinu poznatih internet pretraživača.
+
+### 8.2. Ostali zahtevi
+Sistem mora obezbediti visok stepen interaktivnosti. Odziv interfejsa treba da bude trenutan, što se postiže optimizovanim upitima i korišćenjem JavaScript tehnologija za asinhrono učitavanje podataka bez osvežavanja cele stranice.
+
+<br><br>
+
+## 9. Zahtevi za korisničkom dokumentacijom
+
+### 9.1. Uputstva za korišćenje sajta
+Potrebno je izraditi detaljno uputstvo za studente (proces registracije i pravilnog uploada materijala) i namensko uputstvo za moderatore, koje definiše kriterijume i tehničke korake za odobravanje ili odbijanje sadržaja.
+
+### 9.2. Označavanje
+Svaka stranica aplikacije mora sadržati logotip platforme ScriptShare. Stranice sa materijalima moraju imati jasno istaknutu putanju (breadcrumb): **Fakultet > Smer > Godina > Predmet**. Na profilu korisnika moraju biti vidljivi osnovni identifikacioni podaci.
+
+<br><br>
+
+## 10. Plan i prioriteti
+U prvoj fazi razvoja, fokus je na sledećim prioritetima:
+* Implementacija sistema za autentifikaciju i autorizaciju.
+* Razvoj modula za upload i kategorizaciju materijala.
+* Osnovna pretraga i filtriranje sadržaja.
+* Interfejs za moderatorsko odobravanje dokumenata.
+
+U narednim verzijama sistema planira se uvođenje inovativnih funkcionalnosti, kao što su 
+
+
+automatsko generisanje rezimea materijala, napredni sistemi preporuka zasnovani na interesovanjima korisnika, kao i mogućnost direktne komunikacije između studenata radi lakše saradnje na projektima.
