@@ -56,9 +56,13 @@ Tekst koji sledi definiše namenu aplikacije, zahteve i funkcionalnosti koje ona
 <br><br>
 
 ## 2. Opis problema
-Ova aplikacija stupa u pomoć studentima i omogućava im da na jednom mestu imaju brz, jednostavan i pouzdan pristup materijalima za učenje, posebno u periodima kolokvijuma i ispita, kada je vreme od presudnog značaja. U praksi se materijali poput skripti, zbirki zadataka, rokova iz prethodnih godina i beleški često nalaze rasuti po različitim platformama, grupama na društvenim mrežama ili privatnim porukama, što otežava njihovo pronalaženje i korišćenje.
+Ova aplikacija stupa u pomoć studentima i omogućava im da na jednom mestu imaju brz, jednostavan i pouzdan pristup materijalima za učenje.
 
 U tu svrhu razvija se aplikacija **ScriptShare**, koja predstavlja centralizovano mesto namenjeno studentima za razmenu i organizaciju nastavnih materijala. Korisnici sistema imaju mogućnost da pregledaju dostupne skripte, ispitne rokove iz ranijih godina, zbirke zadataka, laboratorijske vežbe i druge korisne materijale vezane za određene predmete.
+
+Pored osnovnog problema rasutosti materijala, ScriptShare rešava i problem **motivacije korisnika** i **pouzdanosti sadržaja**. 
+
+Kroz inovativni sistem gamifikacije, studenti se podstiču da dele isključivo kvalitetne materijale, dok sistem verifikacije od strane moderatora garantuje tačnost informacija. Takođe, platforma omogućava aktivno popunjavanje baze kroz sistem "potražnje" za nedostajućim materijalima, čime se osigurava da nijedan predmet ne ostane nepokriven.
 
 Registrovani korisnici, pored pregleda sadržaja, mogu da postavljaju nove materijale, preuzimaju postojeće dokumente, ocenjuju njihovu korisnost i ostavljaju komentare kako bi pomogli drugim studentima pri izboru odgovarajućih resursa. Sistem omogućava kategorizaciju materijala po fakultetu, smeru, godini studija i predmetu, čime se značajno olakšava pretraga i pristup željenim dokumentima.
 
@@ -114,10 +118,9 @@ Ovakva arhitektura omogućava centralizovano, sigurno i efikasno skladištenje a
 | Korist za korisnika | Karakteristika koja je obezbeđuje |
 | :--- | :--- |
 | Brz i jednostavan pristup svim materijalima za učenje | Sistem je neprekidno online i omogućava pristup sa bilo kog uređaja povezanog na internet |
-| Centralizovano mesto za sve skripte i rokove | Svi materijali su organizovani po fakultetu, smeru, godini i predmetu |
-| Jednostavna pretraga potrebnih dokumenata | Implementirana pretraga i filtriranje po kategorijama i nazivima predmeta |
-| Mogućnost razmene znanja među studentima | Registrovani korisnici mogu postavljati, komentarisati i ocenjivati materijale |
-| Sigurnost i poverljivost podataka | Pristup sistemu zaštićen je autentifikacijom i autorizacijom korisnika |
+| Motivacija za kvalitetan doprinos | Sistem bodovanja i rangiranje korisnika putem bedževa |
+| Sigurnost u tačnost informacija | Verifikacija materijala od strane moderatora (Verified status) |
+| Nabavka specifičnih skripti | Bounty sistem za traženje i postavljanje nedostajućih materijala |
 | Pouzdanost i kvalitet sadržaja | Moderator vrši proveru, izmenu i brisanje neodgovarajućih materijala |
 | Pristup sa različitih platformi | Interfejs zasnovan na HTML-u, CSS-u, JavaScript-u i Django-u omogućava platformsku nezavisnost |
 | Praćenje popularnosti materijala | Sistem vodi evidenciju broja pregleda i preuzimanja dokumenata |
@@ -170,6 +173,12 @@ Korisnici mogu ocenjivati korisnost materijala i ostavljati tekstualne komentare
 #### 5.3.4. Bookmark
 Sistem nudi mogućnost čuvanja određenih materijala u privatnu listu "omiljenih". Time se studentu omogućava brz pristup često korišćenim dokumentima bez ponovne pretrage.
 
+#### 5.3.5. Gamifikacija (Bodovi i bedževi)
+Sistem prati korisnost doprinosa svakog studenta. Autori čiji materijali dobijaju visoke ocene ili veliki broj preuzimanja automatski akumuliraju poene. Ovi poeni vode do osvajanja tematskih bedževa koji se prikazuju na profilu korisnika, čime se gradi reputacija unutar zajednice i motiviše deljenje proverenog sadržaja.
+
+#### 5.3.6. Bounty sistem
+Ukoliko traženi dokument ne postoji u bazi, student može objaviti javni zahtev (potražnju). Korisnik koji odgovori na zahtev i prvi postavi adekvatan materijal dobija fiksni bonus bodova i specijalan status na tom dokumentu, čime se stimuliše širenje baze podataka za retke predmete.
+
 <br>
 
 ### 5.4. Funkcionalnosti za moderatore i administratore
@@ -183,6 +192,9 @@ U cilju održavanja kvaliteta, moderatori i administrator mogu ukloniti neadekva
 
 #### 5.4.3. Upravljanje korisnicima
 Administrator sistema poseduje ekskluzivna prava za dodeljivanje moderatorskih privilegija, brisanje korisničkih naloga i rešavanje tehničkih problema vezanih za bazu podataka i autorizaciju.
+
+#### 5.4.4. Verifikacija kvaliteta  (Verified status)
+Moderatori imaju opciju za dodelu oznake "Verified" materijalima koji su prošli strogu proveru relevantnosti i tačnosti (npr. zvanični ispitni rokovi). Ovi materijali dobijaju vizuelni identifikator (bedž poverenja) i prioritet u rezultatima pretrage.
 
 <br><br>
 
@@ -224,8 +236,8 @@ Svaka stranica aplikacije mora sadržati logotip platforme ScriptShare. Stranice
 ## 10. Plan i prioriteti
 U prvoj fazi razvoja, fokus je na sledećim prioritetima:
 * Implementacija sistema za autentifikaciju i autorizaciju.
-* Razvoj modula za upload i kategorizaciju materijala.
+* Razvoj modula za upload i kategorizaciju materijala po fakultetima i predmetima.
 * Osnovna pretraga i filtriranje sadržaja.
 * Interfejs za moderatorsko odobravanje dokumenata.
 
-U narednim verzijama sistema planira se uvođenje inovativnih funkcionalnosti, kao što su 
+U završnim fazama projekta, akcenat će biti stavljen na sistem gamifikacije, bounty mehanizam i verifikaciju materijala, čime će ScriptShare postati napredna i samoodrživa platforma.
