@@ -6,7 +6,7 @@
 1. [Uvod](#1-uvod)
     - [1.1. Rezime](#11-rezime)
     - [1.2. Namena dokumenta i ciljne grupe](#12-namena-dokumenta-i-ciljne-grupe)
-2. [Opis problema i inovativna rešenja](#2-opis-problema)
+2. [Opis problema i inovativna rešenja](#2-opis-problema-i-inovativna-rešenja)
 3. [Kategorije korisnika](#3-kategorije-korisnika)
     - [3.1. Gost](#31-gost)
     - [3.2. Student](#32-student)
